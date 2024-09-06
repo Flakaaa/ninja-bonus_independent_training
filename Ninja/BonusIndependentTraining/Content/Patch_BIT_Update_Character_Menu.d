@@ -60,7 +60,7 @@ func void Patch_BIT_Update_Fight_Talent(var string menuItem, var int talent)
     // starts at 10 so 0 is converted to 10.
     var int trained;
     trained = Patch_BIT_GetRealFightTalentPercent(hero, talent);
-    trained = Patch_BIT_Max(10, trained);
+    trained = Patch_BIT_Max(0, trained);
 
     s = ConcatStrings(IntToString(trained), "%");
     s = ConcatStrings(s, "/");
