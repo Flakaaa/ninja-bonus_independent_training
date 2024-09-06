@@ -32,7 +32,7 @@ func int Patch_BIT_TeachFightTalentPercent (var C_NPC slf, var C_NPC oth, var in
 	// FIX: every attribute should start at least at 10
 	var int raiseTo; raiseTo = percent;
 	if (realTalent < 10) {
-		raiseTo = 10 - realTalent + percent;
+		raiseTo = 0 - realTalent + percent;
 	};
     B_RaiseRealFightTalentPercent (oth, talent, raiseTo);
 
